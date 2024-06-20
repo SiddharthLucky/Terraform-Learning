@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowCreateActions",
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "kms:CreateKey",
+        "kms:CreateAlias"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DenyDeleteModifyActions",
+      "Effect": "Deny",
+      "Action": [
+        "iam:DeleteRole",
+        "iam:DeleteRolePolicy",
+        "iam:DeletePolicy",
+        "iam:UpdateRole",
+        "kms:DeleteKey",
+        "kms:ScheduleKeyDeletion",
+        "kms:DisableKey",
+        "kms:UpdateKeyDescription"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+aws secretsmanager create-secret --name myrdscreds --secret-string '{"username":"mydbuser","password":"mysecurepassword"}'
